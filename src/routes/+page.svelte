@@ -1,7 +1,58 @@
-<script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+<script lang="ts">
+  const target = new Date('October 12, 2024 16:30:00');
+
+  $: countdown = '';
+
+  let prevDays: number;
+  let prevHours: number;
+  let prevMins: number;
+
+  $: {
+    const showCountdown = () => {
+      let now = new Date();
+      let distance = target.getTime() - now.getTime();
+
+      let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      if (distance >= 0) {
+        if (days > 1) {
+          if (days !== prevDays) {
+            countdown = `${days} days to go!`;
+            prevDays = days;
+          }
+        } else if (days <= 1 && hours >= 1) {
+          if (hours !== prevHours || minutes !== prevMins) {
+            countdown = `${hours + (days * 24)} hours ${minutes} minutes to go!`;
+            prevHours = hours;
+            prevMins = minutes;
+          }
+        } else {
+          countdown = `Only ${minutes} minutes ${seconds} seconds to go!`;
+        }
+      } else {
+        countdown = 'Time to get married! 💍';
+      }
+    }
+
+    showCountdown();
+
+    setInterval(() => {
+      showCountdown();
+      }, 1000);
+
+  }
+
+
+  function pad(number: number) {
+    var str = '' + number;
+    while (str.length < 2) {
+      str = '0' + str;
+    }
+    return str;
+  }
 </script>
 
 <svelte:head>
@@ -9,51 +60,89 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
+<div class="hero">
+  <h1>We're getting married!</h1>
+</div>
 
-		to your new<br />SvelteKit app
-	</h1>
+<div class="names">
+  <p class="name">Cindy Le</p>
+  <p class="and">And</p>
+  <p class="name">Thomas Kania</p>
+</div>
 
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
+<div class="countdown">
+  {countdown}
+  <!-- <span id="days"></span>d
+  <span id="hours"></span>h
+  <span id="minutes"></span>m
+  <span id="seconds"></span>s -->
+</div>
 
-	<Counter />
-</section>
+<!-- <div class="gallery">
+  <img src="/assets/dock.jpeg" />
+  <img src="/assets/knee.jpeg" />
+</div> -->
 
 <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
-	h1 {
-		width: 100%;
-	}
+    & img {
+      display: block;
+      width: 100%;
+    }
+  }
 
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    min-height: 30rem;
+    color: white;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: 'Prata';
+    background-image: url('$lib/images/dock.jpeg');
+    background-size: cover;
+    background-position: center;
+  }
 
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
+  .names {
+    margin-top: 3rem;
+
+    & .name {
+      margin: 0;
+      font-size: 3.5rem;
+      font-family: 'Alex Brush';
+    }
+
+    & .and {
+      margin: 0;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+  }
+
+  .countdown {
+    margin: 4rem auto 0;
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    padding: 2rem 4rem;
+    min-width: fit-content;
+    width: 50%;
+    font-size: 1.5rem;
+  }
+
+  .person {
+    & img {
+      display: block;
+      border-radius: 50%;
+      width: 20rem;
+      height: 20rem;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
 </style>

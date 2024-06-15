@@ -1,53 +1,75 @@
 <script>
-	import Header from './Header.svelte';
-	import './styles.css';
+  import "./styles.css";
 </script>
 
 <div class="app">
-	<Header />
+
+  <header class="header">
+    <div class="banner">
+      <p>October 12, 2024</p>
+      <p class="logo">C | T</p>
+      <p>Stow, MA</p>
+    </div>
+
+    <nav class="nav-primary">
+      <ul class="nav-list">
+        <li><a href="/" class="nav-link">Home</a></li>
+        <li><a href="/rsvp" class="nav-link">RSVP</a></li>
+        <li><a href="/hotel-travel" class="nav-link">Hotels & Travel</a></li>
+        <li><a href="/wedding-party" class="nav-link">The Wedding Party</a></li>
+        <li><a href="/photos" class="nav-link">PICS OR IT DIDNT HAPPEN</a></li>
+      </ul>
+    </nav>
+  </header>
 
 	<main>
 		<slot />
 	</main>
-
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
 </div>
 
 <style>
+
+.header {
+    padding: 1rem var(--padding-h);
+  }
+
+  .banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-family: 'Prata';
+    font-size: 1.5rem;
+  }
+
+  .nav-primary {
+
+  }
+
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .nav-link {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      color: var(--dress-red);
+    }
+  }
+
 	.app {
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
-	}
-
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
 	}
 </style>
