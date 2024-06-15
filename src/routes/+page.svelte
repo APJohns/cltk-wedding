@@ -72,28 +72,9 @@
 
 <div class="countdown">
   {countdown}
-  <!-- <span id="days"></span>d
-  <span id="hours"></span>h
-  <span id="minutes"></span>m
-  <span id="seconds"></span>s -->
 </div>
 
-<!-- <div class="gallery">
-  <img src="/assets/dock.jpeg" />
-  <img src="/assets/knee.jpeg" />
-</div> -->
-
 <style>
-  .gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    & img {
-      display: block;
-      width: 100%;
-    }
-  }
-
   .hero {
     display: flex;
     justify-content: center;
@@ -133,16 +114,5 @@
     min-width: fit-content;
     width: 50%;
     font-size: 1.5rem;
-  }
-
-  .person {
-    & img {
-      display: block;
-      border-radius: 50%;
-      width: 20rem;
-      height: 20rem;
-      object-fit: cover;
-      object-position: center;
-    }
   }
 </style>
