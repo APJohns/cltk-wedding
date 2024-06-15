@@ -15,7 +15,7 @@
       <ul class="nav-list">
         <li><a href="/" class="nav-link">Home</a></li>
         <li><a href="/rsvp" class="nav-link">RSVP</a></li>
-        <li><a href="/hotel-travel" class="nav-link">Hotels & Travel</a></li>
+        <li><a href="/travel-and-hotel" class="nav-link">Travel &amp; Hotel</a></li>
         <li><a href="/wedding-party" class="nav-link">The Wedding Party</a></li>
         <li><a href="/photos" class="nav-link">PICS OR IT DIDNT HAPPEN</a></li>
       </ul>
