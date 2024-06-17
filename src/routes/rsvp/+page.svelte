@@ -1,7 +1,3 @@
-<script context="module">
-	export const prerender = true;
-</script>
-
 <script lang="ts">
 	import GuestFields from './GuestFields.svelte';
 	import guestData from './guestData';
