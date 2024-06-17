@@ -29,6 +29,7 @@
 	<h2>{guestCode}</h2>
 	{#if isGuestCodeValid}
 		<form name="rsvp" method="POST" data-netlify="true">
+			<input type="hidden" name="form-name" value="rsvp" />
 			{#each guestData[guestCode].names as guest, i}
 				<GuestFields {guest} {i} />
 			{/each}
