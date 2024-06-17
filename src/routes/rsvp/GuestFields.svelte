@@ -6,6 +6,7 @@
 </script>
 
 <h3>{guest}</h3>
+<input type="hidden" name="form-name" value="rsvp" />
 <input type="hidden" name="guest-name" value={guest} />
 <input type="hidden" name="guest-id" value={guest} />
 <fieldset>
