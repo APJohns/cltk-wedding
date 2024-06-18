@@ -7,6 +7,7 @@ export const actions = {
 	default: async ({cookies, request}) => {
     const guestCols = ['name', 'attendance', 'meal', 'allergies'];
 		const data = await request.formData();
+    console.log(data);
 
     const numberOfGuests = Array.from(data.keys()).map(key => key[0]).reduce((acc, cur) => {
       if (Number(cur) > acc) {
@@ -21,6 +22,8 @@ export const actions = {
       const cols = guestCols.map(col => data.has(`${i}-${col}`) ? data.get(`${i}-${col}`) : undefined);
       rsvpData.push([data.get('guest-code'), ...cols]);
     }
+
+    console.log(rsvpData);
 
     // authenticate the service account
     const googleAuth = new google.auth.JWT(
@@ -69,10 +72,12 @@ export const actions = {
     }
 
     const existingData = await readSheet();
+    console.log(existingData);
     if (existingData) {
       if (existingData.map(cols => cols[0]).includes(data.get('guest-code'))) {
         return fail(400, { error: 'Guest of that guest code has already sent an RSVP' });
       }
+      console.log(existingData.concat(rsvpData));
       updateSheet(existingData.concat(rsvpData));
     } else {
       return fail(400, { error: true });
