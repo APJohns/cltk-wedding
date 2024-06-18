@@ -54,7 +54,9 @@ export const actions = {
 
     async function updateSheet(data: any[][]) {
       try {
+        console.log('updating data...');
         const sheetInstance = await google.sheets({ version: 'v4', auth: googleAuth});
+        console.log(sheetInstance.spreadsheets);
 
         await sheetInstance.spreadsheets.values.update({
             auth: googleAuth,
@@ -65,6 +67,7 @@ export const actions = {
               values: data,
             },
         });
+        console.log('Updated! In theory...');
       }
       catch(err) {
         console.log("updateSheet func() error", err);
