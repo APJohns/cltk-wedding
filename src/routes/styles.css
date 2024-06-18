@@ -2,12 +2,59 @@
   --red: #7a0000;
   --blue: #000080;
   --cream: #ffeedc;
+  --cream-dark: hsl(31, 50%, 50%);
   --dress-red: #b00b11;
   --padding-h: 2rem;
+  --font-body: 'Poppins', sans-serif;
+  --font-headings: 'Prata';
 }
 
 body {
   margin: 0;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-body);
+}
+
+.visually-hidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: auto;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;
+}
+
+.label {
+  display: block;
+}
+
+input[type="text"] {
+  border: 1px solid #240d29;
+  border-radius: 0.33rem;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  background: white;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid #240d29;
+  border-radius: 2rem;
+  padding: 0.5rem 2rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  background: white;
+  transition: 0.05s all ease-out;
+
+  &:hover {
+    transition: 0.05s all ease-out;
+  }
+
+  &:active {
+    transition: 0.05s all ease-in;
+  }
 }
