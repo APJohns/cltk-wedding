@@ -81,7 +81,7 @@ export const actions = {
         return fail(400, { error: 'Guest of that guest code has already sent an RSVP' });
       }
       console.log(existingData.concat(rsvpData));
-      updateSheet(existingData.concat(rsvpData));
+      await updateSheet(existingData.concat(rsvpData));
     } else {
       return fail(400, { error: true });
     }
