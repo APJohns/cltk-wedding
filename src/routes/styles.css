@@ -50,6 +50,7 @@ button {
   padding: 0.5rem 2rem;
   font-family: var(--font-body);
   font-size: 1rem;
+  color: black;
   background: white;
   transition: 0.05s all ease-out;
 

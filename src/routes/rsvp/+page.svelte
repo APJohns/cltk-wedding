@@ -99,10 +99,11 @@
 	}
 
 	.rsvp-dialog {
+		box-sizing: border-box;
 		position: relative;
 		padding: 2rem;
-		max-height: 80vh;
-		min-width: 33vw;
+		width: 100%;
+		height: 100%;
 	}
 
 	.guest-code-heading {
@@ -111,5 +112,13 @@
 
 	.submit-rsvp {
 		margin-top: 1.5rem;
+	}
+
+	@media (min-width: 800px) {
+		.rsvp-dialog {
+			width: revert;
+			min-width: 50vw;
+			max-height: 80vh;
+		}
 	}
 </style>
