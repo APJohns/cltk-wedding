@@ -31,7 +31,10 @@ body {
   display: block;
 }
 
-input[type="text"] {
+input[type="text"],
+textarea,
+select {
+  box-sizing: border-box;
   border: 1px solid #240d29;
   border-radius: 0.33rem;
   padding: 0.5rem 1rem;

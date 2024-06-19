@@ -2,6 +2,7 @@
 	import GuestFields from './GuestFields.svelte';
 	import guestData from './guestData';
 	import type { ActionData } from './$types';
+	import { enhance } from '$app/forms';
 
 	export let form: ActionData;
 
@@ -9,6 +10,7 @@
 	let guestCode = '';
 	let isGuestCodeValid = false;
 	let errorMessage = '';
+	let sending = false;
 
 	const checkGuestCode = () => {
 		if (Object.keys(guestData).includes(guestCode)) {
@@ -40,12 +42,30 @@
 		<dialog bind:this={dialog} class="rsvp-dialog">
 			<h3 class="guest-code-heading">{guestCode}</h3>
 			{#if isGuestCodeValid}
-				<form name="rsvp" method="POST">
+				<form
+					name="rsvp"
+					method="POST"
+					use:enhance={() => {
+						sending = true;
+						return ({ update }) => {
+							// Set invalidateAll to false if you don't want to reload page data when submitting
+							update({ invalidateAll: true }).finally(async () => {
+								sending = false;
+							});
+						};
+					}}
+				>
 					<input type="hidden" name="guest-code" value={guestCode} />
 					{#each guestData[guestCode] as guest, i}
 						<GuestFields {guest} {i} />
 					{/each}
-					<button type="submit" class="submit-rsvp">RSVP</button>
+					<button type="submit" class="submit-rsvp" disabled={sending}>
+						{#if sending}
+							Sending...
+						{:else}
+							RSVP
+						{/if}
+					</button>
 				</form>
 			{/if}
 		</dialog>
@@ -78,6 +98,10 @@
 	}
 
 	.rsvp-dialog {
+		position: relative;
+		padding: 2rem;
+		max-height: 80vh;
+		min-width: 33vw;
 	}
 
 	.guest-code-heading {
