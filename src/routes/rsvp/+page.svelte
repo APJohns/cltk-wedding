@@ -30,7 +30,7 @@
 		<form class="guest-code-form" on:submit|preventDefault={checkGuestCode}>
 			<label class="guest-code-field">
 				<div class="visually-hidden">Guest Code</div>
-				<input type="text" bind:value={guestCode} />
+				<input type="text" bind:value={guestCode} autocomplete="off" autocapitalize="off" />
 			</label>
 			<button type="submit">Look-up</button>
 		</form>
