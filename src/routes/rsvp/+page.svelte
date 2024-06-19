@@ -37,15 +37,15 @@
 			<p>{errorMessage}</p>
 		{/if}
 
-		<dialog bind:this={dialog}>
-			<h3>{guestCode}</h3>
+		<dialog bind:this={dialog} class="rsvp-dialog">
+			<h3 class="guest-code-heading">{guestCode}</h3>
 			{#if isGuestCodeValid}
 				<form name="rsvp" method="POST">
 					<input type="hidden" name="guest-code" value={guestCode} />
-					{#each guestData[guestCode].names as guest, i}
+					{#each guestData[guestCode] as guest, i}
 						<GuestFields {guest} {i} />
 					{/each}
-					<button type="submit">RSVP</button>
+					<button type="submit" class="submit-rsvp">RSVP</button>
 				</form>
 			{/if}
 		</dialog>
@@ -75,5 +75,16 @@
 		gap: 1rem;
 		justify-content: center;
 		margin-top: 2rem;
+	}
+
+	.rsvp-dialog {
+	}
+
+	.guest-code-heading {
+		font-family: var(--font-headings);
+	}
+
+	.submit-rsvp {
+		margin-top: 1.5rem;
 	}
 </style>
