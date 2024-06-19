@@ -24,10 +24,10 @@
 			<div>Meal</div>
 			<select name={`${i}-meal`} required>
 				<option value="">--Please choose a meal--</option>
-				<option value="prime-rib">Prime Rib</option>
-				<option value="chicken-parm">Chicken Parmesan</option>
-				<option value="vegetarian">Vegetarian</option>
-				<option value="kids-meal">Kid's Meal (Chicken Tenders & Fries)</option>
+				<option value="filet-mignon">Stuffed Filet Mignon</option>
+				<option value="chicken-florentine">Chicken Florentine</option>
+				<option value="vegetarian">Pasta Primavera (Vegetarian)</option>
+				<option value="kids-meal">Chicken Fingers and Fries (For children under 12)</option>
 			</select>
 		</label>
 		<label class="allergies">
