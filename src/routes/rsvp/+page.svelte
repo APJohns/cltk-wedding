@@ -83,7 +83,7 @@
 <style>
 	.wrapper {
 		border-top: 1px solid #ddd;
-		padding-top: 2rem;
+		padding: 2rem var(--padding-h) 0 var(--padding-h);
 
 		& h2 {
 			font-family: var(--font-headings);
@@ -92,6 +92,7 @@
 
 	.guest-code-form {
 		display: flex;
+		flex-wrap: wrap;
 		gap: 1rem;
 		justify-content: center;
 		margin-top: 2rem;

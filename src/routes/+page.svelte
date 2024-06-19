@@ -77,12 +77,12 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 2rem;
+		padding: 1rem;
 		min-height: 30rem;
 		color: white;
-		font-size: 3rem;
 		text-transform: uppercase;
-		font-family: 'Prata';
+		font-family: var(--font-headings);
+		font-size: 1.8rem;
 		background-image: url('$lib/images/dock.jpeg');
 		background-size: cover;
 		background-position: center;
@@ -112,5 +112,12 @@
 		min-width: fit-content;
 		width: 50%;
 		font-size: 1.5rem;
+	}
+
+	@media (min-width: 800px) {
+		.hero {
+			padding: 2rem;
+			font-size: 3rem;
+		}
 	}
 </style>
