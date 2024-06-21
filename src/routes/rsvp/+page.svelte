@@ -28,7 +28,7 @@
 
 <div class="wrapper">
 	{#if !form?.success && !form?.error}
-		<h2>RSVP</h2>
+		<h1>RSVP</h1>
 		<p>You should have a guest code from your rsvp card. Enter that here to RSVP!</p>
 		<form class="guest-code-form" on:submit|preventDefault={checkGuestCode}>
 			<label class="guest-code-field">
@@ -44,7 +44,7 @@
 
 		<dialog bind:this={dialog} class="rsvp-dialog">
 			<div class="dialog-header">
-				<h3 class="guest-code-heading">{cleanCode(guestCode)}</h3>
+				<h2 class="guest-code-heading">{cleanCode(guestCode)}</h2>
 				<button type="button" class="icon-button" on:click={() => dialog.close()}>
 					<img srcset={xmark} alt="close" />
 				</button>
@@ -126,10 +126,6 @@
 		& .icon-button {
 			justify-self: end;
 		}
-	}
-
-	.guest-code-heading {
-		font-family: var(--font-headings);
 	}
 
 	.submit-rsvp {

@@ -35,6 +35,10 @@ body {
 	white-space: nowrap;
 }
 
+h1 {
+  font-family: var(--font-headings);
+}
+
 .label {
   display: block;
 }
