@@ -14,11 +14,14 @@
 			<p>
 				We've organized a hotel block at the Embassy Suites by Hilton Boston Marlborough. Below is
 				the booking information so you can get a room at a discounted rate, because everyone loves a
-				bargain.
+				bargain. Note that these rates are for suite rooms so a “single king bed” also has a
+				pull-out sofa and so do the double queen rooms!
 			</p>
 			<p>
-				Call the hotel at 508-485-5900 and select the option “0” to speak with a front desk agent
-				and ask to book a room under the LeKania Wedding or use our personal <a
+				Call the hotel at <a href="tel:5084855900">508-485-5900</a> and select the option “0” to
+				speak with a front desk agent and ask to book a room under the LeKania Wedding or use our
+				personal
+				<a
 					href="https://www.hilton.com/en/attend-my-event/bosmaes-906-a1b8c773-d681-41f4-93ce-4bac4637ae23/"
 					>booking website</a
 				>!
