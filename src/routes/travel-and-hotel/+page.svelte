@@ -65,7 +65,7 @@
 
 	.card {
 		border-radius: 8px;
-		padding: 1rem 2rem;
+		padding: 1.5rem 2rem;
 		background: white;
 
 		& h2 {
