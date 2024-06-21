@@ -1,6 +1,7 @@
 <script>
 	import './styles.css';
 	import bars from '$lib/images/bars.svg';
+	import xmark from '$lib/images/xmark.svg';
 
 	let isOpen = false;
 </script>
@@ -11,7 +12,7 @@
 			<p class="on-lg">October 12, 2024</p>
 			<div class="nav-trigger-wrapper on-sm">
 				<button class="icon-button" on:click={() => (isOpen = !isOpen)}>
-					<img srcset={bars} alt="menu" />
+					<img srcset={isOpen ? xmark : bars} alt="toggle menu" />
 				</button>
 			</div>
 			<p class="logo">C | T</p>
