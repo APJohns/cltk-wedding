@@ -56,7 +56,8 @@ select {
   background: white;
 }
 
-button {
+button,
+.cta {
   cursor: pointer;
   border: 1px solid #240d29;
   border-radius: 2rem;
@@ -73,6 +74,16 @@ button {
 
   &:active {
     transition: 0.05s all ease-in;
+  }
+}
+
+.cta {
+  text-decoration: none;
+  background: var(--gold);
+  font-weight: bold;
+
+  &:hover {
+    background: var(--champagne);
   }
 }
 

@@ -60,6 +60,7 @@
 
 <div class="hero">
 	<h1>We're getting married!</h1>
+	<a href="/rsvp" class="cta">RSVP Now!</a>
 </div>
 
 <div class="names">
@@ -75,17 +76,20 @@
 <style>
 	.hero {
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		padding: 1rem;
 		min-height: 30rem;
 		color: white;
-		text-transform: uppercase;
-		font-family: var(--font-headings);
-		font-size: 1.8rem;
 		background-image: url('$lib/images/dock.jpeg');
 		background-size: cover;
 		background-position: center;
+		font-size: 1.8rem;
+
+		& h1 {
+			text-transform: uppercase;
+		}
 	}
 
 	.names {
