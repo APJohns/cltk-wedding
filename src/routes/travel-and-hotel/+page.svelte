@@ -18,7 +18,7 @@
 			</p>
 			<p>
 				Call the hotel at 508-485-5900 and select the option “0” to speak with a front desk agent
-				and ask to book a room under the LeKania Wedding Or Follow the below link to our personal <a
+				and ask to book a room under the LeKania Wedding or use our personal <a
 					href="https://www.hilton.com/en/attend-my-event/bosmaes-906-a1b8c773-d681-41f4-93ce-4bac4637ae23/"
 					>booking website</a
 				>!
