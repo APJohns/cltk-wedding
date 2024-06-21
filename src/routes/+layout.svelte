@@ -25,8 +25,8 @@
 				<li><a href="/" class="nav-link">Home</a></li>
 				<li><a href="/rsvp" class="nav-link">RSVP</a></li>
 				<li><a href="/travel-and-hotel" class="nav-link">Travel &amp; Hotel</a></li>
-				<li><a href="/wedding-party" class="nav-link">The Wedding Party</a></li>
-				<li><a href="/photos" class="nav-link">PICS OR IT DIDNT HAPPEN</a></li>
+				<!-- <li><a href="/wedding-party" class="nav-link">The Wedding Party</a></li> -->
+				<!-- <li><a href="/photos" class="nav-link">PICS OR IT DIDNT HAPPEN</a></li> -->
 			</ul>
 		</nav>
 	</header>
@@ -39,6 +39,7 @@
 <style>
 	.header {
 		padding: 1rem var(--padding-h);
+		border-bottom: 1px solid #ddd;
 	}
 
 	.banner {
@@ -56,6 +57,10 @@
 
 		& :last-child {
 			text-align: right;
+		}
+
+		& p {
+			margin: 0;
 		}
 	}
 
@@ -86,11 +91,11 @@
 	}
 
 	.nav-list {
-		display: flex;
-		flex-direction: column;
+		display: grid;
+		grid-template-columns: 1fr;
 		justify-content: center;
 		gap: 1.5rem;
-		margin: 0;
+		margin: 2rem 0 0;
 		padding: 0;
 		list-style: none;
 	}
@@ -125,7 +130,10 @@
 		}
 
 		.nav-list {
-			flex-direction: row;
+			grid-template-columns: repeat(3, 1fr);
+			margin-left: auto;
+			margin-right: auto;
+			max-width: fit-content;
 		}
 	}
 </style>

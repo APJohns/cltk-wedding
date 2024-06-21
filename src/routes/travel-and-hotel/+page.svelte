@@ -50,14 +50,10 @@
 <style>
 	.page-body {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 2rem;
+		grid-template-columns: 1fr;
+		gap: 4rem 2rem;
 		padding: 2rem 4rem;
 		/* text-align: left; */
-	}
-
-	.overview {
-		grid-column: span 2;
 	}
 
 	.gradient-border {
@@ -74,6 +70,16 @@
 
 		& h2 {
 			margin-top: 0;
+		}
+	}
+
+	@media (min-width: 800px) {
+		.overview {
+			grid-column: span 2;
+		}
+
+		.page-body {
+			grid-template-columns: 1fr 1fr;
 		}
 	}
 </style>
