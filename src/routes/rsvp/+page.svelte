@@ -117,6 +117,7 @@
 	.dialog-header {
 		display: grid;
 		grid-template-columns: 1fr auto 1fr;
+		align-items: center;
 
 		& .guest-code-heading {
 			grid-column-start: 2;
