@@ -12,8 +12,10 @@
 	let errorMessage = '';
 	let sending = false;
 
+	const cleanCode = (code: string) => code.toLowerCase().trim();
+
 	const checkGuestCode = () => {
-		if (Object.keys(guestData).includes(guestCode)) {
+		if (Object.keys(guestData).includes(cleanCode(guestCode))) {
 			isGuestCodeValid = true;
 			dialog.showModal();
 		} else {
@@ -40,7 +42,7 @@
 		{/if}
 
 		<dialog bind:this={dialog} class="rsvp-dialog">
-			<h3 class="guest-code-heading">{guestCode}</h3>
+			<h3 class="guest-code-heading">{cleanCode(guestCode)}</h3>
 			{#if isGuestCodeValid}
 				<form
 					name="rsvp"
@@ -56,7 +58,7 @@
 					}}
 				>
 					<input type="hidden" name="guest-code" value={guestCode} />
-					{#each guestData[guestCode] as guest, i}
+					{#each guestData[cleanCode(guestCode)] as guest, i}
 						<GuestFields {guest} {i} />
 					{/each}
 					<button type="submit" class="submit-rsvp" disabled={sending}>
