@@ -10,7 +10,7 @@
 		<div class="banner">
 			<p class="on-lg">October 12, 2024</p>
 			<div class="nav-trigger-wrapper on-sm">
-				<button class="nav-trigger" on:click={() => (isOpen = !isOpen)}>
+				<button class="icon-button" on:click={() => (isOpen = !isOpen)}>
 					<img srcset={bars} alt="menu" />
 				</button>
 			</div>
@@ -75,13 +75,6 @@
 	.nav-trigger-wrapper {
 		display: flex;
 		justify-content: start;
-	}
-
-	.nav-trigger {
-		display: block;
-		border: 0;
-		padding: 0;
-		max-width: 1.5rem;
 	}
 
 	.nav-primary {

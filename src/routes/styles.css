@@ -62,3 +62,12 @@ button {
     transition: 0.05s all ease-in;
   }
 }
+
+.icon-button {
+  display: block;
+  border: 0;
+  border-radius: 0;
+  padding: 0.25rem;
+  width: 1.75rem;
+  max-width: 1.75rem;
+}

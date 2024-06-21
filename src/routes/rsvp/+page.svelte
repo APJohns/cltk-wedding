@@ -3,6 +3,7 @@
 	import guestData from './guestData';
 	import type { ActionData } from './$types';
 	import { enhance } from '$app/forms';
+	import xmark from '$lib/images/xmark.svg';
 
 	export let form: ActionData;
 
@@ -42,7 +43,12 @@
 		{/if}
 
 		<dialog bind:this={dialog} class="rsvp-dialog">
-			<h3 class="guest-code-heading">{cleanCode(guestCode)}</h3>
+			<div class="dialog-header">
+				<h3 class="guest-code-heading">{cleanCode(guestCode)}</h3>
+				<button type="button" class="icon-button" on:click={() => dialog.close()}>
+					<img srcset={xmark} alt="close" />
+				</button>
+			</div>
 			{#if isGuestCodeValid}
 				<form
 					name="rsvp"
@@ -103,9 +109,22 @@
 	.rsvp-dialog {
 		box-sizing: border-box;
 		position: relative;
-		padding: 2rem;
+		padding: 1rem 2rem;
 		width: 100%;
 		height: 100%;
+	}
+
+	.dialog-header {
+		display: grid;
+		grid-template-columns: 1fr auto 1fr;
+
+		& .guest-code-heading {
+			grid-column-start: 2;
+		}
+
+		& .icon-button {
+			justify-self: end;
+		}
 	}
 
 	.guest-code-heading {
