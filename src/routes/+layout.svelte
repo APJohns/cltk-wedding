@@ -101,7 +101,7 @@
 		text-transform: uppercase;
 
 		&:hover {
-			color: var(--dress-red);
+			color: var(--maroon);
 		}
 	}
 

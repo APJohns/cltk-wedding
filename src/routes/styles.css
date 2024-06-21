@@ -7,6 +7,14 @@
   --padding-h: 2rem;
   --font-body: 'Poppins', sans-serif;
   --font-headings: 'Prata';
+
+  --maroon: #800000;
+  --gold: #FFD700;
+  --tan: #D2B48C;
+  --champagne: #F0EAD6;
+  --blush: #F4CCCC;
+  --pink: #FFB6C1;
+  --navy: #000080;
 }
 
 body {
