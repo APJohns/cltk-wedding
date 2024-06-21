@@ -323,7 +323,7 @@ const guestData: GuestCollection = {
     "Renee Fenner",
     "Holly Fenner"
   ],
-  "Paxton": [
+  "paxton": [
     "Daniel Fenner",
     "Jennifer Fenner",
     "Mackenzie Fenner",
@@ -333,7 +333,7 @@ const guestData: GuestCollection = {
     "Chuck Fenner",
     "Mary Fenner"
   ],
-  "Fenner1": [
+  "fenner1": [
     "Alex Fenner",
     "Ana Fenner"
   ],
@@ -374,64 +374,64 @@ const guestData: GuestCollection = {
     "Charles Mwangi",
     "Sarah Mwangi"
   ],
-  "Lekania8": [
+  "lekania8": [
     "Agnieska Lozada",
     "Jack Lozada",
     "Mikayla Lozada",
     "Emily Lozada"
   ],
-  "Lekania9": [
+  "lekania9": [
     "Krystyna Piascik"
   ],
-  "Lekania10": [
+  "lekania10": [
     "Marysia Malkowski"
   ],
-  "Lekania11": [
+  "lekania11": [
     "Andy Rogalski",
     "Sandy Rogalski"
   ],
-  "Lekania12": [
+  "lekania12": [
     "Erik Rogalski",
     "Jennifer Rogalski"
   ],
-  "Lekania13": [
+  "lekania13": [
     "Alyssa Randle",
     "Jesse Randle"
   ],
-  "Lekania14": [
+  "lekania14": [
     "Stan Rogalski",
     "Maryjane Rogalski"
   ],
-  "Lekania15": [
+  "lekania15": [
     "Joseph Rogalski",
     "Liz Rogalski"
   ],
-  "Lekania16": [
+  "lekania16": [
     "Michele Rogalski-Kearsley",
     "Brian Kearsley"
   ],
-  "Lekania17": [
+  "lekania17": [
     "Krzysztof Kania",
     "Patti Kania",
     "Jessica Kania"
   ],
-  "Lekania18": [
+  "lekania18": [
     "Zenon Malkowski",
     "Biata Malkowski"
   ],
-  "Lekania19": [
+  "lekania19": [
     "Magdalena Johnson",
     "Adam Johnson"
   ],
-  "Lekania20": [
+  "lekania20": [
     "Leszek Piascik",
     "Bozena Piascik"
   ],
-  "Lekania21": [
+  "lekania21": [
     "Slawek Piascik",
     "Janina Piascik"
   ],
-  "Lekania22": [
+  "lekania22": [
     "Kamil Piascik",
     "Jessica Piascik"
   ]
