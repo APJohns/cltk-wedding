@@ -1,7 +1,7 @@
 <div class="page-body">
 	<div class="overview">
 		<h1>Travel &amp; Hotel</h1>
-		<p>
+		<p class="constrained">
 			Our wedding, both ceremony and reception, will be held at Butternut Farm Golf Club in Stow,
 			Massachusetts. About 25 minutes northeast of Worcester and 45 minutes west of Boston, Stow is
 			a small town known for apple picking and beautiful fall foliage.
@@ -52,7 +52,7 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 4rem 2rem;
-		padding: 2rem 4rem;
+		padding: 2rem var(--padding-h);
 		/* text-align: left; */
 	}
 
@@ -65,7 +65,7 @@
 
 	.card {
 		border-radius: 8px;
-		padding: 1.5rem 2rem;
+		padding: 1.5rem 1rem;
 		background: white;
 
 		& h2 {
@@ -80,6 +80,10 @@
 
 		.page-body {
 			grid-template-columns: 1fr 1fr;
+		}
+
+		.card {
+			padding: 1.5rem 2rem;
 		}
 	}
 </style>

@@ -90,7 +90,6 @@
 
 <style>
 	.wrapper {
-		border-top: 1px solid #ddd;
 		padding: 2rem var(--padding-h) 0 var(--padding-h);
 
 		& h2 {
