@@ -17,7 +17,7 @@
 			</div>
 			<p class="logo">C | T</p>
 			<p>
-				<span class="on-sm">10/4/24</span>
+				<span class="on-sm">10/12/24</span>
 				Stow, MA
 			</p>
 		</div>
