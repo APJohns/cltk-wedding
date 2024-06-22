@@ -305,7 +305,7 @@ const guestData: GuestCollection = {
   "poppop": [
     "Pop Pop"
   ],
-  "GolfIsLife": [
+  "golfislife": [
     "Jim Fenner",
     "Allisen Tencza"
   ],
