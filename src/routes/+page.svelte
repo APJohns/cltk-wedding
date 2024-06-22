@@ -1,4 +1,10 @@
 <script lang="ts">
+	import dine from '$lib/images/dine.svg';
+	import drinks from '$lib/images/drinks.svg';
+	import party from '$lib/images/party.svg';
+	import rings from '$lib/images/rings.svg';
+	import sparkler from '$lib/images/sparkler.svg';
+
 	const target = new Date('October 12, 2024 16:30:00');
 
 	$: countdown = '';
@@ -73,6 +79,61 @@
 	{countdown}
 </div>
 
+<div class="wedding-day">
+	<h2>Wedding Day</h2>
+	<ol class="schedule">
+		<li class="event">
+			<div class="event-time">4:30pm</div>
+			<div class="event-details">
+				<div class="event-name">
+					<img src={rings} alt="" />
+					Ceremony Time!
+				</div>
+			</div>
+		</li>
+
+		<li class="event">
+			<div class="event-time">5:10pm</div>
+			<div class="event-details">
+				<div class="event-name">
+					<img src={drinks} alt="" />
+					Cocktail Time!
+				</div>
+			</div>
+		</li>
+
+		<li class="event">
+			<div class="event-time">6:00pm</div>
+			<div class="event-details">
+				<div class="event-name">
+					<img src={dine} alt="" />
+					Dinner Time!
+				</div>
+			</div>
+		</li>
+
+		<li class="event">
+			<div class="event-time">8:00pm</div>
+			<div class="event-details">
+				<div class="event-name">
+					<img src={party} alt="" />
+					Toast Time!
+				</div>
+			</div>
+		</li>
+
+		<li class="event">
+			<div class="event-time">10:30pm</div>
+			<div class="event-details">
+				<div class="event-name">
+					<img src={sparkler} alt="" />
+					Go Home Time!
+				</div>
+			</div>
+		</li>
+	</ol>
+</div>
+
 <style>
 	.hero {
 		display: flex;
@@ -116,6 +177,59 @@
 		min-width: fit-content;
 		width: 50%;
 		font-size: 1.5rem;
+	}
+
+	.wedding-day {
+		margin-top: 4rem;
+	}
+
+	.schedule {
+		text-align: left;
+		list-style: none;
+		padding: 0;
+	}
+
+	.event {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.event-time {
+		text-align: right;
+		align-self: center;
+	}
+
+	.event-details {
+		position: relative;
+		border-left: 2px solid black;
+	}
+
+	.event-details::before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: -9px;
+		width: 16px;
+		border-bottom: 2px solid black;
+	}
+
+	.event-name {
+		display: inline-flex;
+		flex-direction: column;
+		align-items: center;
+		width: 5.5rem;
+		text-align: center;
+	}
+
+	.event-name img {
+		display: block;
+		width: 40px;
+	}
+
+	.event-time,
+	.event-name {
+		padding: 32px 24px;
 	}
 
 	@media (min-width: 800px) {
