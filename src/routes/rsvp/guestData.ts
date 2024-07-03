@@ -202,9 +202,11 @@ const guestData: GuestCollection = {
   "number5": [
     "Bac Xuan",
     "Bac Oanh",
+    "Huy"
+  ],
+  "vinh": [
     "Vinh",
     "Vinh +1",
-    "Huy"
   ],
   "kimanh": [
     "Kim Anh",
@@ -216,15 +218,19 @@ const guestData: GuestCollection = {
   "tran1": [
     "Bac Tam",
     "Bac Hong",
+    "Thong",
+    "Thong +1"
+  ],
+  "tran2": [
     "Anh Co",
     "Anh Co partner",
     "Child 1",
     "Child 2",
-    "Child 3",
+    "Child 3"
+  ],
+  "tran3": [
     "Minh Nhi",
-    "Patrick",
-    "Thong",
-    "Thong +1"
+    "Patrick"
   ],
   "pochita": [
     "Di Mai",
@@ -233,7 +239,9 @@ const guestData: GuestCollection = {
     "Dan"
   ],
   "bui1": [
-    "Di Tien",
+    "Di Tien"
+  ],
+  "bui2": [
     "Kimmi",
     "Daniel"
   ],
@@ -283,7 +291,7 @@ const guestData: GuestCollection = {
     "Tho"
   ],
   "nh3": [
-    "Phung",
+    "Thy",
     "Thuan"
   ],
   "nh4": [
@@ -296,7 +304,7 @@ const guestData: GuestCollection = {
   ],
   "nh6": [
     "Duy",
-    "Dan"
+    "Phuong"
   ],
   "bailey1012": [
     "Lynn Kania",
