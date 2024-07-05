@@ -136,7 +136,7 @@
 		</li>
 
 		<li class="event">
-			<div class="event-time">6:30pm</div>
+			<div class="event-time">8:00pm</div>
 			<div class="event-details">
 				<div class="event-name">
 					<img src={party} alt="" />
