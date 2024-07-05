@@ -4,6 +4,9 @@
 	import party from '$lib/images/party.svg';
 	import rings from '$lib/images/rings.svg';
 	import sparkler from '$lib/images/sparkler.svg';
+	import reception from '$lib/images/reception.svg';
+	import cocktails from '$lib/images/cocktails.svg';
+	import leave from '$lib/images/leave.svg';
 
 	const target = new Date('October 12, 2024 16:30:00');
 
@@ -93,10 +96,10 @@
 		</li>
 
 		<li class="event">
-			<div class="event-time">5:10pm</div>
+			<div class="event-time">5:00pm</div>
 			<div class="event-details">
 				<div class="event-name">
-					<img src={drinks} alt="" />
+					<img src={cocktails} alt="" />
 					Cocktail Time!
 				</div>
 			</div>
@@ -106,6 +109,26 @@
 			<div class="event-time">6:00pm</div>
 			<div class="event-details">
 				<div class="event-name">
+					<img src={reception} alt="" />
+					Reception Time!
+				</div>
+			</div>
+		</li>
+
+		<li class="event">
+			<div class="event-time">6:20pm</div>
+			<div class="event-details">
+				<div class="event-name">
+					<img src={drinks} alt="" />
+					Toast Time!
+				</div>
+			</div>
+		</li>
+
+		<li class="event">
+			<div class="event-time">6:30pm</div>
+			<div class="event-details">
+				<div class="event-name">
 					<img src={dine} alt="" />
 					Dinner Time!
 				</div>
@@ -113,20 +136,20 @@
 		</li>
 
 		<li class="event">
-			<div class="event-time">8:00pm</div>
+			<div class="event-time">6:30pm</div>
 			<div class="event-details">
 				<div class="event-name">
 					<img src={party} alt="" />
-					Toast Time!
+					Party Time!
 				</div>
 			</div>
 		</li>
 
 		<li class="event">
-			<div class="event-time">10:30pm</div>
+			<div class="event-time">10:00pm</div>
 			<div class="event-details">
 				<div class="event-name">
-					<img src={sparkler} alt="" />
+					<img src={leave} alt="" />
 					Go Home Time!
 				</div>
 			</div>
