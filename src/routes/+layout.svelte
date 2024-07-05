@@ -2,6 +2,7 @@
 	import './styles.css';
 	import bars from '$lib/images/bars.svg';
 	import xmark from '$lib/images/xmark.svg';
+	import { page } from '$app/stores';
 
 	let isOpen = false;
 </script>
@@ -23,11 +24,23 @@
 		</div>
 		<nav class={`nav-primary${isOpen ? ' open' : ''}`}>
 			<ul class="nav-list">
-				<li><a href="/" class="nav-link">Home</a></li>
-				<li><a href="/rsvp" class="nav-link">RSVP</a></li>
-				<li><a href="/travel-and-hotel" class="nav-link">Travel &amp; Hotel</a></li>
+				<li><a href="/" class="nav-link" class:active={$page.url.pathname === '/'}>Home</a></li>
+				<li>
+					<a href="/rsvp" class="nav-link" class:active={$page.url.pathname === '/rsvp'}>RSVP</a>
+				</li>
+				<li>
+					<a
+						href="/travel-and-hotel"
+						class="nav-link"
+						class:active={$page.url.pathname === '/travel-and-hotel'}>Travel &amp; Hotel</a
+					>
+				</li>
 				<!-- <li><a href="/wedding-party" class="nav-link">The Wedding Party</a></li> -->
-				<!-- <li><a href="/photos" class="nav-link">PICS OR IT DIDNT HAPPEN</a></li> -->
+				<li>
+					<a href="/gallery" class="nav-link" class:active={$page.url.pathname === '/gallery'}
+						>Gallery</a
+					>
+				</li>
 			</ul>
 		</nav>
 	</header>
@@ -103,8 +116,12 @@
 
 	.nav-link {
 		color: black;
-		text-decoration: none;
 		text-transform: uppercase;
+		text-decoration: none;
+
+		&.active {
+			border-bottom: 1px solid black;
+		}
 
 		&:hover {
 			color: var(--maroon);
@@ -131,7 +148,7 @@
 		}
 
 		.nav-list {
-			grid-template-columns: repeat(3, 1fr);
+			grid-template-columns: repeat(4, 1fr);
 			margin-left: auto;
 			margin-right: auto;
 			max-width: fit-content;
