@@ -41,6 +41,11 @@
 						>Gallery</a
 					>
 				</li>
+				<li>
+					<a href="https://registry.theknot.com/-october-2023-ma/48868926" class="nav-link"
+						>Registry</a
+					>
+				</li>
 			</ul>
 		</nav>
 	</header>
@@ -148,7 +153,7 @@
 		}
 
 		.nav-list {
-			grid-template-columns: repeat(4, 1fr);
+			grid-template-columns: repeat(5, 1fr);
 			margin-left: auto;
 			margin-right: auto;
 			max-width: fit-content;
