@@ -2,9 +2,10 @@
 	<div class="overview">
 		<h1>Travel &amp; Hotel</h1>
 		<p class="constrained">
-			Our wedding, both ceremony and reception, will be held at Butternut Farm Golf Club in Stow,
-			Massachusetts. About 25 minutes northeast of Worcester and 45 minutes west of Boston, Stow is
-			a small town known for apple picking and beautiful fall foliage.
+			Our wedding, both ceremony and reception, will be held at <strong
+				>Butternut Farm Golf Club</strong
+			> in Stow, Massachusetts. About 25 minutes northeast of Worcester and 45 minutes west of Boston,
+			Stow is a small town known for apple picking and beautiful fall foliage.
 		</p>
 	</div>
 
@@ -12,17 +13,17 @@
 		<div class="card hotel">
 			<h2>Hotel</h2>
 			<p>
-				We've organized a hotel block at the Embassy Suites by Hilton Boston Marlborough. Below is
-				the booking information so you can get a room at a discounted rate, because everyone loves a
-				bargain. Note that these rates are for suite rooms so a “single king bed” also has a
-				pull-out sofa and so do the double queen rooms!
+				We've organized a hotel block at the <strong
+					>Embassy Suites by Hilton Boston Marlborough</strong
+				>. Below is the booking information so you can get a room at the hotel with us! Although the
+				last date to book with our block has passed, there are still rooms available so book now!
+				Let them know you'll be staying for our wedding for a special welcome at check-in!
 			</p>
 			<p>
 				Call the hotel at <a href="tel:5084855900">508-485-5900</a> and select the option “0” to
-				speak with a front desk agent and ask to book a room under the LeKania Wedding or use our
-				personal
+				speak with a front desk agent and ask to book a room under the LeKania Wedding or use their
 				<a
-					href="https://www.hilton.com/en/attend-my-event/bosmaes-906-a1b8c773-d681-41f4-93ce-4bac4637ae23/"
+					href="https://www.hilton.com/en/book/reservation/flexibledates/?ctyhocn=BOSMAES&arrivalDate=2024-10-12&departureDate=2024-10-13&room1NumAdults=1&cid=OH%2CMB%2Cattendmyevent%2CMULTIPR%2COfferCTA%2CMultipage%2CBook%2Ci81912"
 					>booking website</a
 				>!
 			</p>
@@ -43,8 +44,10 @@
 				before the ceremony and back to the hotel at the conclusion of the night.
 			</p>
 			<p>
-				Final details, including transportation departure time, will be posted to this page when it
-				is available.
+				We've organized a bus to meet us at the hotel for a departure time of 3:15 and you'll arrive
+				at the venue on time for the ceremony. If you plan on joining us on the bus, <a
+					href="https://forms.gle/CLtHLRranSyeiaQp9">please fill out this form</a
+				>.
 			</p>
 		</div>
 	</div>
